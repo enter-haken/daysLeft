@@ -20,6 +20,7 @@ if __name__ == '__main__':
     PARSER.add_argument('-d', '--date', required=True, help='target date, format YYYY-mm-dd')
     PARSER.add_argument('-w', '--excludeWeekends', action="store_true", help='exclude weekends')
     PARSER.add_argument('-e', '--excludeDays', nargs="+" , help='exclude specific days, format YYYY-mm-dd')
+    PARSER.add_argument('-s', '--subtractDays', type=int, help='substract days, not yet planed (e.g. holydays)')
     PARSER.add_argument('-v', '--verbose', action="store_true", help='show dates')
     
     args = PARSER.parse_args()
@@ -42,4 +43,7 @@ if __name__ == '__main__':
     if args.verbose:
         print( [ str(x) for x in leftDays])
 
-    print(len(leftDays))
+    if (args.subtractDays):
+        print(len(leftDays) - args.subtractDays)
+    else:
+        print(len(leftDays))

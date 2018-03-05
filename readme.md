@@ -19,6 +19,9 @@ optional arguments:
   -e EXCLUDEDAYS [EXCLUDEDAYS ...], --excludeDays EXCLUDEDAYS [EXCLUDEDAYS ...]
                         exclude specific days, format YYYY-mm-dd (default:
                         None)
+  -s SUBTRACTDAYS, --subtractDays SUBTRACTDAYS
+                        substract days, not yet planed (e.g. holydays)
+                        (default: None)
   -v, --verbose         show dates (default: False)
 ```
 
